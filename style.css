@@ -1,0 +1,157 @@
+:root {
+    --clr-very-dark-greyish-blue: hsl(217, 19%, 35%);
+    --clr-desat-dark-blue: hsl(214, 17%, 51%);
+    --clr-greyish-blue: hsl(212, 23%, 69%);
+    --clr-light-greyish-blue: hsl(210, 46%, 95%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+}
+
+body {
+    background-color: var(--clr-light-greyish-blue);
+    display: grid;
+    font-family: 'Manrope', sans-serif;
+    min-height: 100vh;
+    place-content: center;
+}
+
+main {
+    background-color: var(--clr-white);
+    border-radius: 25px;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    font-weight: var(--fw-bold);
+}
+
+p {
+    font-size: .8125rem;
+    font-weight: var(--fw-regular);
+    line-height: 1.75;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.visible {
+    display: none;
+}
+
+.hero__text {
+    padding: 1em;
+}
+
+.share__container {
+    justify-content: space-between;
+    margin-top: 1em;
+    padding: 1em;
+    position: relative;
+}
+
+.avatar__container {
+    border-radius: 50%;
+    max-width: 25%;
+}
+
+.avatar__img {
+    border-radius: 50%;
+}
+
+.share__icon {
+    align-self: center;
+    background-color: var(--clr-greyish-blue);
+    border-radius: 50%;
+    margin-top: 5%;
+    padding: .55em;
+}
+
+.share__icon:hover {
+    background-color: var(--clr-desat-dark-blue);
+    cursor: pointer;
+}
+
+.clicked__container {
+    background-color: var(--clr-greyish-blue);
+    border-radius: 0 0 25px 25px;
+    height: 90%;
+    justify-content: space-evenly;
+    position: absolute;
+        bottom: 5%;
+    width: 100%;
+}
+
+.li__p {
+    color: var(--clr-white);
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+}
+
+.clicked__share {
+    background-color: var(--clr-light-greyish-blue);
+    border-radius: 50%;
+    cursor: pointer;
+    padding: .35em;
+}
+
+.clicked__share__div {
+    margin-top: 10%;
+}
+
+.clicked__li {
+    align-items: center;
+    gap: 1em;
+    justify-content: space-between;
+}
+
+@media(min-width: 600px) {
+    main {
+        max-width: 1000px;
+    }
+
+    .hero__container {
+        display: flex;
+        position: relative;
+    }
+
+    .clicked__share {
+        padding: .20em
+    }
+
+    .column {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media(min-width: 800px) {
+    .clicked__container {
+        border-radius: 25px;
+        height: 50px;
+        justify-content: space-evenly;
+        padding: .50em;
+        position: absolute;
+            left: 65%;
+            bottom: 70%;
+        width: 50%;   
+    }
+
+    .clicked__share {
+        padding: .20em;
+    }
+
+    .clicked__share__div {
+        margin-top: 5%;
+    }
+}
