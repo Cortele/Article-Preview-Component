@@ -87,8 +87,9 @@ li {
     border-radius: 0 0 25px 25px;
     height: 90%;
     justify-content: space-evenly;
+    padding-left: 2em;
     position: absolute;
-        bottom: 5%;
+        left: 0%;
     width: 100%;
 }
 
@@ -118,6 +119,10 @@ li {
 @media(min-width: 600px) {
     main {
         max-width: 1000px;
+    }
+
+    .clicked__container {
+        border-radius: 0;
     }
 
     .hero__container {
